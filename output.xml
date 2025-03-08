@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-05T18:02:23.748661" rpa="false" schemaversion="5">
+<suite id="s1" name="Form" source="c:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\Form.robot">
+<test id="s1-t1" name="Teste de Navegação para Elements" line="5">
+<kw name="Acessar Página Inicial" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-05T18:02:23.983195" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-05T18:02:23.982204" elapsed="12.654389"/>
+</kw>
+<status status="PASS" start="2025-03-05T18:02:23.981209" elapsed="12.655384"/>
+</kw>
+<kw name="Clicar em Elements" owner="home_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-05T18:02:36.638606" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div[2]/div/div[1]/div/div[3]'.</msg>
+<arg>xpath=//*[@id="app"]/div/div/div[2]/div/div[1]/div/div[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-05T18:02:36.638606" elapsed="0.139608"/>
+</kw>
+<status status="PASS" start="2025-03-05T18:02:36.637595" elapsed="0.140619"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-05T18:02:36.796928" level="INFO">Current page contains text 'Elements'.</msg>
+<arg>Elements</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-05T18:02:36.779251" elapsed="0.018931"/>
+</kw>
+<status status="PASS" start="2025-03-05T18:02:23.980201" elapsed="12.819338"/>
+</test>
+<status status="PASS" start="2025-03-05T18:02:23.753257" elapsed="13.047664"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

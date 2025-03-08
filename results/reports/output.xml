@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-08T09:50:53.761623" rpa="false" schemaversion="5">
+<suite id="s1" name="Home" source="C:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\home.robot">
+<test id="s1-t1" name="Teste de Navegação para Elements" line="6">
+<kw name="Acessar Página Inicial" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:50:54.052693" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-08T09:50:54.052693" elapsed="6.240887"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:50:54.051701" elapsed="6.241879"/>
+</kw>
+<kw name="Clicar no elemento" owner="home_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-08T09:51:00.294580" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<var>${seletor}</var>
+<arg>xpath=//h5[text()='${texto}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.294580" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seletor}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.294580" elapsed="0.116189"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:00.411777" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<arg>${seletor}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.410769" elapsed="0.135822"/>
+</kw>
+<arg>Forms</arg>
+<status status="PASS" start="2025-03-08T09:51:00.293580" elapsed="0.253011"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:00.575181" level="INFO">Current page contains text 'Forms'.</msg>
+<arg>Forms</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.546591" elapsed="0.028590"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:50:54.050703" elapsed="6.525503"/>
+</test>
+<test id="s1-t2" name="Teste de add" line="12">
+<kw name="Click on Web Tables" owner="form_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:00.577712" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
+<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.577712" elapsed="0.094972"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Web Tables')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.673683" elapsed="0.248023"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:00.922704" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Web Tables')]'.</msg>
+<arg>xpath=//*[contains(text(), 'Web Tables')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:00.922704" elapsed="0.152043"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:51:00.576206" elapsed="0.498541"/>
+</kw>
+<kw name="Add an User" owner="form_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:01.075734" level="INFO">Clicking button 'id=addNewRecordButton'.</msg>
+<arg>id=addNewRecordButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:01.075734" elapsed="0.284601"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Registration Form')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:01.360335" elapsed="0.037566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:01.398923" level="INFO">Typing text 'Douglas' into text field 'id=firstName'.</msg>
+<arg>id=firstName</arg>
+<arg>${first}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:01.398923" elapsed="0.325241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:01.724164" level="INFO">Typing text 'Santos' into text field 'id=lastName'.</msg>
+<arg>id=lastName</arg>
+<arg>${last}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:01.724164" elapsed="0.153485"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:01.878747" level="INFO">Typing text 'dfcs@cin.ufpe' into text field 'id=userEmail'.</msg>
+<arg>id=userEmail</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:01.877649" elapsed="0.217501"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.096151" level="INFO">Typing text '23' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>${age}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.095150" elapsed="0.158051"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.254217" level="INFO">Typing text '3000' into text field 'id=salary'.</msg>
+<arg>id=salary</arg>
+<arg>${salary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.253201" elapsed="0.237561"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.490762" level="INFO">Typing text 'TI' into text field 'id=department'.</msg>
+<arg>id=department</arg>
+<arg>${dept}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.490762" elapsed="0.154233"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.645993" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.644995" elapsed="0.179386"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), ${first})]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.825391" elapsed="0.082715"/>
+</kw>
+<arg>Douglas</arg>
+<arg>Santos</arg>
+<arg>dfcs@cin.ufpe</arg>
+<arg>23</arg>
+<arg>3000</arg>
+<arg>TI</arg>
+<status status="PASS" start="2025-03-08T09:51:01.074747" elapsed="1.834389"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:51:00.576206" elapsed="2.332930"/>
+</test>
+<test id="s1-t3" name="Test edit an userEmail" line="16">
+<kw name="Edit an User" owner="form_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=edit-record-4</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="0.025865"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.935999" level="INFO">Executing JavaScript:
+document.getElementById('edit-record-4').click()
+Without any arguments.</msg>
+<arg>document.getElementById('edit-record-4').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.935999" elapsed="0.019859"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:02.958382" level="INFO">Typing text 'Maria' into text field 'id=firstName'.</msg>
+<arg>id=firstName</arg>
+<arg>${newNane}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:02.957859" elapsed="0.138643"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:03.098011" level="INFO">Clicking button 'id=submit'.</msg>
+<arg>id=submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-08T09:51:03.098011" elapsed="0.161994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),${newNane})]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:03.260005" elapsed="0.064153"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-08T09:51:13.325917" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-08T09:51:03.325429" elapsed="10.000488"/>
+</kw>
+<arg>Douglas</arg>
+<arg>Maria</arg>
+<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="10.415783"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="10.416895"/>
+</test>
+<test id="s1-t4" name="Test delet an user" line="19">
+<kw name="Delete a User" owner="form_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=delete-record-4</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:13.328574" elapsed="0.025408"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-08T09:51:13.354978" level="INFO">Executing JavaScript:
+document.getElementById('delete-record-4').click()
+Without any arguments.</msg>
+<arg>document.getElementById('delete-record-4').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-08T09:51:13.354978" elapsed="0.023360"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'Maria')]</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-03-08T09:51:13.379364" elapsed="0.014595"/>
+</kw>
+<arg>Maria</arg>
+<status status="PASS" start="2025-03-08T09:51:13.328574" elapsed="0.065385"/>
+</kw>
+<status status="PASS" start="2025-03-08T09:51:13.327029" elapsed="0.066930"/>
+</test>
+<status status="PASS" start="2025-03-08T09:50:53.763635" elapsed="19.631328"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Home">Home</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
