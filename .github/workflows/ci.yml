@@ -19,7 +19,7 @@ jobs:
           pip install robotframework
           pip install robotframework-seleniumlibrary
           pip install robotframework-requests  # Se for usar API
-          pip install robotframework-yaml      # Se for usar arquivos YAML
+          pip install robotframework-yamllibrary      # Se for usar arquivos YAML
 
       - name: Run Robot Tests
         run: |
