@@ -1,151 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-09T09:38:40.992257" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-09T12:53:09.224242" rpa="false" schemaversion="5">
 <suite id="s1" name="Home" source="c:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\home.robot">
-<test id="s1-t1" name="Download an File" line="21">
+<test id="s1-t1" name="Check Alerts" line="32">
 <kw name="Acessar Página Inicial" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:41.284243" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg time="2025-03-09T12:53:09.533275" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-09T09:38:41.284243" elapsed="5.014524"/>
+<status status="PASS" start="2025-03-09T12:53:09.532130" elapsed="6.284031"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:41.280684" elapsed="5.019481"/>
+<status status="PASS" start="2025-03-09T12:53:09.531115" elapsed="6.285046"/>
 </kw>
 <kw name="Clicar no elemento" owner="home_page">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T09:38:46.302859" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<msg time="2025-03-09T12:53:15.818164" level="INFO">${seletor} = xpath=//h5[text()='Alerts, Frame &amp; Windows']</msg>
 <var>${seletor}</var>
 <arg>xpath=//h5[text()='${texto}']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.301853" elapsed="0.001006"/>
+<status status="PASS" start="2025-03-09T12:53:15.818164" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${seletor}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.302859" elapsed="0.030051"/>
+<status status="PASS" start="2025-03-09T12:53:15.819398" elapsed="0.053903"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:46.333895" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<msg time="2025-03-09T12:53:15.874295" level="INFO">Clicking element 'xpath=//h5[text()='Alerts, Frame &amp; Windows']'.</msg>
 <arg>${seletor}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.332910" elapsed="0.133517"/>
+<status status="PASS" start="2025-03-09T12:53:15.874295" elapsed="0.132433"/>
 </kw>
-<arg>Forms</arg>
-<status status="PASS" start="2025-03-09T09:38:46.300677" elapsed="0.165750"/>
+<arg>Alerts, Frame &amp; Windows</arg>
+<status status="PASS" start="2025-03-09T12:53:15.817160" elapsed="0.189568"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:46.488416" level="INFO">Current page contains text 'Forms'.</msg>
-<arg>Forms</arg>
+<msg time="2025-03-09T12:53:16.026824" level="INFO">Current page contains text 'Alerts, Frame &amp; Windows'.</msg>
+<arg>Alerts, Frame &amp; Windows</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.468707" elapsed="0.019709"/>
+<status status="PASS" start="2025-03-09T12:53:16.007741" elapsed="0.020082"/>
 </kw>
-<kw name="Click on Upload and Download" owner="upload_download_page">
+<kw name="Click on Alerts, Frame &amp; Windows" owner="alert_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:46.490417" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
-<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]</arg>
+<msg time="2025-03-09T12:53:16.030117" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Alerts, Frame &amp; Windows')])[2]'.</msg>
+<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Alerts, Frame &amp; Windows')])[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.490417" elapsed="0.085446"/>
+<status status="PASS" start="2025-03-09T12:53:16.029119" elapsed="0.108395"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<arg>xpath=//*[contains(text(), 'Browser Windows')]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.575863" elapsed="0.270913"/>
+<status status="PASS" start="2025-03-09T12:53:16.137514" elapsed="0.030491"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:46.847775" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Upload and Download')]'.</msg>
-<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<msg time="2025-03-09T12:53:16.168005" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Alerts')]'.</msg>
+<arg>xpath=//*[contains(text(), 'Alerts')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.847775" elapsed="0.107283"/>
+<status status="PASS" start="2025-03-09T12:53:16.168005" elapsed="0.088253"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:46.489415" elapsed="0.465643"/>
+<status status="PASS" start="2025-03-09T12:53:16.029119" elapsed="0.227139"/>
 </kw>
-<kw name="Click Download" owner="upload_download_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:46.957286" level="INFO">Clicking element 'id=downloadButton'.</msg>
-<arg>id=downloadButton</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T09:38:46.957286" elapsed="0.198514"/>
+<kw name="Click in Basic allert" owner="alert_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:16.259260" level="INFO">Clicking button 'id=alertButton'.</msg>
+<arg>id=alertButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T12:53:16.258258" elapsed="0.112191"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:46.956067" elapsed="0.199733"/>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:16.371429" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<arg>You clicked a button</arg>
+<arg>timeout=2s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-09T12:53:16.371429" elapsed="0.008427"/>
 </kw>
-<kw name="Check if is Download" owner="upload_download_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-03-09T09:38:47.159799" level="INFO" html="true">File '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' exists.</msg>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.158806" elapsed="0.000993"/>
+<status status="PASS" start="2025-03-09T12:53:16.257255" elapsed="0.123982"/>
 </kw>
-<arg>30x</arg>
-<arg>2s</arg>
-<arg>File Should Exist</arg>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.157797" elapsed="0.002002"/>
+<kw name="Click in Timer allert" owner="alert_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:16.382602" level="INFO">Clicking button 'id=timerAlertButton'.</msg>
+<arg>id=timerAlertButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T12:53:16.382602" elapsed="0.143097"/>
 </kw>
-<kw name="Get File Size" owner="OperatingSystem">
-<msg time="2025-03-09T09:38:47.160801" level="INFO" html="true">Size of file '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' is 4096 bytes.</msg>
-<msg time="2025-03-09T09:38:47.161808" level="INFO">${size} = 4096</msg>
-<var>${size}</var>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Returns and logs file size as an integer in bytes.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.160801" elapsed="0.001007"/>
+<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
+<arg>You clicked a button</arg>
+<arg>timeout=4s</arg>
+<doc>Verifies that no alert is present.</doc>
+<status status="PASS" start="2025-03-09T12:53:16.526723" elapsed="4.305809"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${size} &gt; 0</arg>
-<arg>File its correct</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.161808" elapsed="0.000000"/>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:20.833571" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:07</msg>
+<arg>This alert appeared after 5 seconds</arg>
+<arg>timeout=7s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-09T12:53:20.832532" elapsed="1.015529"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:47.156805" elapsed="0.005993"/>
+<status status="PASS" start="2025-03-09T12:53:16.381237" elapsed="5.466824"/>
 </kw>
-<kw name="Click Upload" owner="upload_download_page">
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2025-03-09T09:38:47.164216" level="INFO">Sending C:\Users\dougl\Desktop\Robot_Web\resources\imgs\princess.jpg to browser.</msg>
-<arg>id=uploadFile</arg>
-<arg>${UPLOAD_NAME}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.164216" elapsed="0.065509"/>
+<kw name="Click in confirm allert" owner="alert_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:21.850502" level="INFO">Clicking button 'id=confirmButton'.</msg>
+<arg>id=confirmButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T12:53:21.850502" elapsed="0.123026"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:47.162798" elapsed="0.068001"/>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:21.975031" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>action=ACCEPT</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-09T12:53:21.973528" elapsed="0.008393"/>
 </kw>
-<kw name="Check if is Download" owner="upload_download_page">
-<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
-<kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-03-09T09:38:47.233810" level="INFO" html="true">File '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' exists.</msg>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.233810" elapsed="0.000992"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath=//span[@id='confirmResult']</arg>
+<arg>You selected Ok</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T12:53:21.983362" elapsed="0.040687"/>
 </kw>
-<arg>30x</arg>
-<arg>2s</arg>
-<arg>File Should Exist</arg>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.232814" elapsed="0.001988"/>
+<status status="PASS" start="2025-03-09T12:53:21.849497" elapsed="0.174552"/>
 </kw>
-<kw name="Get File Size" owner="OperatingSystem">
-<msg time="2025-03-09T09:38:47.235804" level="INFO" html="true">Size of file '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' is 4096 bytes.</msg>
-<msg time="2025-03-09T09:38:47.236804" level="INFO">${size} = 4096</msg>
-<var>${size}</var>
-<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
-<doc>Returns and logs file size as an integer in bytes.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.234802" elapsed="0.002002"/>
+<kw name="Click in cancell allert" owner="alert_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:22.026042" level="INFO">Clicking button 'id=confirmButton'.</msg>
+<arg>id=confirmButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T12:53:22.026042" elapsed="0.123929"/>
 </kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${size} &gt; 0</arg>
-<arg>File its correct</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-03-09T09:38:47.237817" elapsed="0.000000"/>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:22.149971" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<arg>action=DISMISS</arg>
+<arg>timeout=5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-03-09T12:53:22.149971" elapsed="0.006497"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:47.231804" elapsed="0.007114"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath=//span[@id='confirmResult']</arg>
+<arg>You selected Cancel</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T12:53:22.157472" elapsed="0.019286"/>
 </kw>
-<status status="PASS" start="2025-03-09T09:38:41.279670" elapsed="5.961339"/>
+<status status="PASS" start="2025-03-09T12:53:22.025045" elapsed="0.151713"/>
+</kw>
+<kw name="Click in Prompt allert" owner="alert_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-09T12:53:22.179278" level="INFO">Clicking button 'id=promtButton'.</msg>
+<arg>id=promtButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T12:53:22.178268" elapsed="0.123067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-09T12:53:23.302830" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-09T12:53:22.302346" elapsed="1.000484"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>${NAME_ALERT}</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2025-03-09T12:53:23.302830" elapsed="0.009019"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath=//span[@id='promptResult']</arg>
+<arg>${NAME_ALERT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T12:53:23.312847" elapsed="0.054806"/>
+</kw>
+<arg>Douglas</arg>
+<status status="PASS" start="2025-03-09T12:53:22.178268" elapsed="1.189385"/>
+</kw>
+<status status="PASS" start="2025-03-09T12:53:09.531115" elapsed="13.837930"/>
 </test>
-<status status="PASS" start="2025-03-09T09:38:40.998573" elapsed="6.245118"/>
+<status status="PASS" start="2025-03-09T12:53:09.229249" elapsed="14.142114"/>
 </suite>
 <statistics>
 <total>
