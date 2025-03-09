@@ -35,6 +35,7 @@ jobs:
         sudo unzip /tmp/chromedriver.zip -d /usr/local/bin/
         sudo chmod +x /usr/local/bin/chromedriver
         rm /tmp/chromedriver.zip
+        sudo apt-get purge needrestart
 
     - name: Install Python dependencies
       run: |
