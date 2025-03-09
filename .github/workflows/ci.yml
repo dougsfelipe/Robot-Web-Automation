@@ -23,6 +23,7 @@ jobs:
 
     - name: Install system dependencies (Chrome and ChromeDriver)
       run: |
+        sudo apt-get purge needrestart
         sudo apt-get update
         sudo apt-get install -y wget unzip
         wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -35,7 +36,7 @@ jobs:
         sudo unzip /tmp/chromedriver.zip -d /usr/local/bin/
         sudo chmod +x /usr/local/bin/chromedriver
         rm /tmp/chromedriver.zip
-        sudo apt-get purge needrestart
+        
 
     - name: Install Python dependencies
       run: |
