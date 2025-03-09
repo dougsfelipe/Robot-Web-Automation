@@ -1,136 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-08T09:50:53.761623" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-09T09:37:26.810678" rpa="false" schemaversion="5">
 <suite id="s1" name="Home" source="C:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\home.robot">
-<test id="s1-t1" name="Teste de Navegação para Elements" line="6">
+<test id="s1-t1" name="Add, Edit and Delete an User in Web Tables" line="7">
 <kw name="Acessar Página Inicial" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:50:54.052693" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg time="2025-03-09T09:37:27.101989" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-08T09:50:54.052693" elapsed="6.240887"/>
+<status status="PASS" start="2025-03-09T09:37:27.101989" elapsed="5.363511"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:50:54.051701" elapsed="6.241879"/>
+<status status="PASS" start="2025-03-09T09:37:27.100998" elapsed="5.364502"/>
 </kw>
 <kw name="Clicar no elemento" owner="home_page">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-08T09:51:00.294580" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<msg time="2025-03-09T09:37:32.466650" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
 <var>${seletor}</var>
 <arg>xpath=//h5[text()='${texto}']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.294580" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-09T09:37:32.466650" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${seletor}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.294580" elapsed="0.116189"/>
+<status status="PASS" start="2025-03-09T09:37:32.466650" elapsed="0.028937"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:00.411777" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<msg time="2025-03-09T09:37:32.495587" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
 <arg>${seletor}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.410769" elapsed="0.135822"/>
+<status status="PASS" start="2025-03-09T09:37:32.495587" elapsed="0.122217"/>
 </kw>
 <arg>Forms</arg>
-<status status="PASS" start="2025-03-08T09:51:00.293580" elapsed="0.253011"/>
+<status status="PASS" start="2025-03-09T09:37:32.466650" elapsed="0.151154"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:00.575181" level="INFO">Current page contains text 'Forms'.</msg>
+<msg time="2025-03-09T09:37:32.636747" level="INFO">Current page contains text 'Forms'.</msg>
 <arg>Forms</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.546591" elapsed="0.028590"/>
+<status status="PASS" start="2025-03-09T09:37:32.618802" elapsed="0.017945"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:50:54.050703" elapsed="6.525503"/>
-</test>
-<test id="s1-t2" name="Teste de add" line="12">
 <kw name="Click on Web Tables" owner="form_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:00.577712" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
+<msg time="2025-03-09T09:37:32.637741" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
 <arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.577712" elapsed="0.094972"/>
+<status status="PASS" start="2025-03-09T09:37:32.637741" elapsed="0.090780"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[contains(text(), 'Web Tables')]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.673683" elapsed="0.248023"/>
+<status status="PASS" start="2025-03-09T09:37:32.729995" elapsed="0.255659"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:00.922704" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Web Tables')]'.</msg>
+<msg time="2025-03-09T09:37:32.986655" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Web Tables')]'.</msg>
 <arg>xpath=//*[contains(text(), 'Web Tables')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:00.922704" elapsed="0.152043"/>
+<status status="PASS" start="2025-03-09T09:37:32.986655" elapsed="0.128239"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:51:00.576206" elapsed="0.498541"/>
+<status status="PASS" start="2025-03-09T09:37:32.637741" elapsed="0.477153"/>
 </kw>
 <kw name="Add an User" owner="form_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:01.075734" level="INFO">Clicking button 'id=addNewRecordButton'.</msg>
+<msg time="2025-03-09T09:37:33.115890" level="INFO">Clicking button 'id=addNewRecordButton'.</msg>
 <arg>id=addNewRecordButton</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:01.075734" elapsed="0.284601"/>
+<status status="PASS" start="2025-03-09T09:37:33.115890" elapsed="0.204412"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[contains(text(), 'Registration Form')]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:01.360335" elapsed="0.037566"/>
+<status status="PASS" start="2025-03-09T09:37:33.321288" elapsed="0.026384"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:01.398923" level="INFO">Typing text 'Douglas' into text field 'id=firstName'.</msg>
+<msg time="2025-03-09T09:37:33.347672" level="INFO">Typing text 'Douglas' into text field 'id=firstName'.</msg>
 <arg>id=firstName</arg>
 <arg>${first}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:01.398923" elapsed="0.325241"/>
+<status status="PASS" start="2025-03-09T09:37:33.347672" elapsed="0.254155"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:01.724164" level="INFO">Typing text 'Santos' into text field 'id=lastName'.</msg>
+<msg time="2025-03-09T09:37:33.602820" level="INFO">Typing text 'Santos' into text field 'id=lastName'.</msg>
 <arg>id=lastName</arg>
 <arg>${last}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:01.724164" elapsed="0.153485"/>
+<status status="PASS" start="2025-03-09T09:37:33.601827" elapsed="0.203364"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:01.878747" level="INFO">Typing text 'dfcs@cin.ufpe' into text field 'id=userEmail'.</msg>
+<msg time="2025-03-09T09:37:33.806196" level="INFO">Typing text 'dfcs@cin.ufpe' into text field 'id=userEmail'.</msg>
 <arg>id=userEmail</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:01.877649" elapsed="0.217501"/>
+<status status="PASS" start="2025-03-09T09:37:33.806196" elapsed="0.349377"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.096151" level="INFO">Typing text '23' into text field 'id=age'.</msg>
+<msg time="2025-03-09T09:37:34.155573" level="INFO">Typing text '23' into text field 'id=age'.</msg>
 <arg>id=age</arg>
 <arg>${age}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.095150" elapsed="0.158051"/>
+<status status="PASS" start="2025-03-09T09:37:34.155573" elapsed="0.125080"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.254217" level="INFO">Typing text '3000' into text field 'id=salary'.</msg>
+<msg time="2025-03-09T09:37:34.280653" level="INFO">Typing text '3000' into text field 'id=salary'.</msg>
 <arg>id=salary</arg>
 <arg>${salary}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.253201" elapsed="0.237561"/>
+<status status="PASS" start="2025-03-09T09:37:34.280653" elapsed="0.205887"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.490762" level="INFO">Typing text 'TI' into text field 'id=department'.</msg>
+<msg time="2025-03-09T09:37:34.486540" level="INFO">Typing text 'TI' into text field 'id=department'.</msg>
 <arg>id=department</arg>
 <arg>${dept}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.490762" elapsed="0.154233"/>
+<status status="PASS" start="2025-03-09T09:37:34.486540" elapsed="0.314806"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.645993" level="INFO">Clicking button 'id=submit'.</msg>
+<msg time="2025-03-09T09:37:34.802433" level="INFO">Clicking button 'id=submit'.</msg>
 <arg>id=submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.644995" elapsed="0.179386"/>
+<status status="PASS" start="2025-03-09T09:37:34.802433" elapsed="0.165513"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[contains(text(), ${first})]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.825391" elapsed="0.082715"/>
+<status status="PASS" start="2025-03-09T09:37:34.967946" elapsed="0.066070"/>
 </kw>
 <arg>Douglas</arg>
 <arg>Santos</arg>
@@ -138,94 +135,348 @@
 <arg>23</arg>
 <arg>3000</arg>
 <arg>TI</arg>
-<status status="PASS" start="2025-03-08T09:51:01.074747" elapsed="1.834389"/>
+<status status="PASS" start="2025-03-09T09:37:33.115890" elapsed="1.918126"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:51:00.576206" elapsed="2.332930"/>
-</test>
-<test id="s1-t3" name="Test edit an userEmail" line="16">
 <kw name="Edit an User" owner="form_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=edit-record-4</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="0.025865"/>
+<status status="PASS" start="2025-03-09T09:37:35.035041" elapsed="0.021774"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.935999" level="INFO">Executing JavaScript:
+<msg time="2025-03-09T09:37:35.057804" level="INFO">Executing JavaScript:
 document.getElementById('edit-record-4').click()
 Without any arguments.</msg>
 <arg>document.getElementById('edit-record-4').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.935999" elapsed="0.019859"/>
+<status status="PASS" start="2025-03-09T09:37:35.056815" elapsed="0.025278"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:02.958382" level="INFO">Typing text 'Maria' into text field 'id=firstName'.</msg>
+<msg time="2025-03-09T09:37:35.084088" level="INFO">Typing text 'Maria' into text field 'id=firstName'.</msg>
 <arg>id=firstName</arg>
 <arg>${newNane}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:02.957859" elapsed="0.138643"/>
+<status status="PASS" start="2025-03-09T09:37:35.083094" elapsed="0.157818"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:03.098011" level="INFO">Clicking button 'id=submit'.</msg>
+<msg time="2025-03-09T09:37:35.241917" level="INFO">Clicking button 'id=submit'.</msg>
 <arg>id=submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-08T09:51:03.098011" elapsed="0.161994"/>
+<status status="PASS" start="2025-03-09T09:37:35.240912" elapsed="0.100970"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[contains(text(),${newNane})]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:03.260005" elapsed="0.064153"/>
+<status status="PASS" start="2025-03-09T09:37:35.343328" elapsed="0.061445"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-08T09:51:13.325917" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-03-09T09:37:45.405016" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-08T09:51:03.325429" elapsed="10.000488"/>
+<status status="PASS" start="2025-03-09T09:37:35.404773" elapsed="10.000243"/>
 </kw>
 <arg>Douglas</arg>
 <arg>Maria</arg>
-<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="10.415783"/>
+<status status="PASS" start="2025-03-09T09:37:35.035041" elapsed="10.369975"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:51:02.910134" elapsed="10.416895"/>
-</test>
-<test id="s1-t4" name="Test delet an user" line="19">
 <kw name="Delete a User" owner="form_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=delete-record-4</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:13.328574" elapsed="0.025408"/>
+<status status="PASS" start="2025-03-09T09:37:45.406049" elapsed="0.025471"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-03-08T09:51:13.354978" level="INFO">Executing JavaScript:
+<msg time="2025-03-09T09:37:45.431520" level="INFO">Executing JavaScript:
 document.getElementById('delete-record-4').click()
 Without any arguments.</msg>
 <arg>document.getElementById('delete-record-4').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-03-08T09:51:13.354978" elapsed="0.023360"/>
+<status status="PASS" start="2025-03-09T09:37:45.431520" elapsed="0.024717"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[contains(text(),'Maria')]</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-08T09:51:13.379364" elapsed="0.014595"/>
+<status status="PASS" start="2025-03-09T09:37:45.456237" elapsed="0.012016"/>
 </kw>
 <arg>Maria</arg>
-<status status="PASS" start="2025-03-08T09:51:13.328574" elapsed="0.065385"/>
+<status status="PASS" start="2025-03-09T09:37:45.406049" elapsed="0.062204"/>
 </kw>
-<status status="PASS" start="2025-03-08T09:51:13.327029" elapsed="0.066930"/>
+<kw name="Acessar Página Inicial" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:45.469264" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-09T09:37:45.469264" elapsed="5.136052"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:45.469264" elapsed="5.136052"/>
+</kw>
+<kw name="Clicar no elemento" owner="home_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T09:37:50.606297" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<var>${seletor}</var>
+<arg>xpath=//h5[text()='${texto}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T09:37:50.606297" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seletor}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-09T09:37:50.606297" elapsed="0.029430"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:50.636726" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<arg>${seletor}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:37:50.636726" elapsed="0.125453"/>
+</kw>
+<arg>Forms</arg>
+<status status="PASS" start="2025-03-09T09:37:50.606297" elapsed="0.155882"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:50.779380" level="INFO">Current page contains text 'Forms'.</msg>
+<arg>Forms</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T09:37:50.763207" elapsed="0.016173"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-09T09:37:50.780392" elapsed="2.175607"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:27.098997" elapsed="25.857002"/>
 </test>
-<status status="PASS" start="2025-03-08T09:50:53.763635" elapsed="19.631328"/>
+<test id="s1-t2" name="Download an File" line="21">
+<kw name="Acessar Página Inicial" owner="home_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:52.957998" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-09T09:37:52.957998" elapsed="5.109929"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:52.956990" elapsed="5.110937"/>
+</kw>
+<kw name="Clicar no elemento" owner="home_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T09:37:58.068921" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<var>${seletor}</var>
+<arg>xpath=//h5[text()='${texto}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.068921" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seletor}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.069925" elapsed="0.038783"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.108708" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<arg>${seletor}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.108708" elapsed="0.139881"/>
+</kw>
+<arg>Forms</arg>
+<status status="PASS" start="2025-03-09T09:37:58.068921" elapsed="0.179668"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.268793" level="INFO">Current page contains text 'Forms'.</msg>
+<arg>Forms</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.248589" elapsed="0.020204"/>
+</kw>
+<kw name="Click on Upload and Download" owner="upload_download_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.270796" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
+<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.269799" elapsed="0.121095"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.391954" elapsed="0.254946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.647899" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Upload and Download')]'.</msg>
+<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.647899" elapsed="0.102526"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:58.268793" elapsed="0.481632"/>
+</kw>
+<kw name="Click Download" owner="upload_download_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.752594" level="INFO">Clicking element 'id=downloadButton'.</msg>
+<arg>id=downloadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.752594" elapsed="0.205744"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:58.751429" elapsed="0.206909"/>
+</kw>
+<kw name="Check if is Download" owner="upload_download_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-03-09T09:37:58.960449" level="INFO" html="true">File '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' exists.</msg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.959347" elapsed="0.001102"/>
+</kw>
+<arg>30x</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.959347" elapsed="0.001102"/>
+</kw>
+<kw name="Get File Size" owner="OperatingSystem">
+<msg time="2025-03-09T09:37:58.960449" level="INFO" html="true">Size of file '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' is 4096 bytes.</msg>
+<msg time="2025-03-09T09:37:58.960449" level="INFO">${size} = 4096</msg>
+<var>${size}</var>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Returns and logs file size as an integer in bytes.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.960449" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${size} &gt; 0</arg>
+<arg>File its correct</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-03-09T09:37:58.960449" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:58.959347" elapsed="0.001102"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:37:52.956990" elapsed="6.004452"/>
+</test>
+<test id="s1-t3" name="Ulpload an File" line="30">
+<kw name="Click Upload" owner="upload_download_page">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:37:58.962443" level="INFO">Sending C:\Users\dougl\Desktop\Robot_Web\UsersdouglDesktopRobot_Webesourcesimgsprincess.jpg to browser.</msg>
+<msg time="2025-03-09T09:37:59.253590" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-09T09:37:59.253590" level="FAIL">InvalidArgumentException: Message: invalid argument: File not found : C:UsersdouglDesktopRobot_Webesourcesimgsprincess.jpg
+  (Session info: chrome=131.0.6778.205)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F20A80D5+2992373]
+	(No symbol) [0x00007FF7F1D3BFD0]
+	(No symbol) [0x00007FF7F1BD590A]
+	(No symbol) [0x00007FF7F1C214A8]
+	(No symbol) [0x00007FF7F1C4F36A]
+	(No symbol) [0x00007FF7F1C1C596]
+	(No symbol) [0x00007FF7F1C4F580]
+	(No symbol) [0x00007FF7F1C6F584]
+	(No symbol) [0x00007FF7F1C4F113]
+	(No symbol) [0x00007FF7F1C1A918]
+	(No symbol) [0x00007FF7F1C1BA81]
+	GetHandleVerifier [0x00007FF7F2106A2D+3379789]
+	GetHandleVerifier [0x00007FF7F211C32D+3468109]
+	GetHandleVerifier [0x00007FF7F2110043+3418211]
+	GetHandleVerifier [0x00007FF7F1E9C78B+847787]
+	(No symbol) [0x00007FF7F1D4757F]
+	(No symbol) [0x00007FF7F1D42FC4]
+	(No symbol) [0x00007FF7F1D4315D]
+	(No symbol) [0x00007FF7F1D32979]
+	BaseThreadInitThunk [0x00007FFF968CE8D7+23]
+	RtlUserThreadStart [0x00007FFF9741BF6C+44]
+</msg>
+<arg>id=uploadFile</arg>
+<arg>${UPLOAD_NAME}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="FAIL" start="2025-03-09T09:37:58.962443" elapsed="0.368432">InvalidArgumentException: Message: invalid argument: File not found : C:UsersdouglDesktopRobot_Webesourcesimgsprincess.jpg
+  (Session info: chrome=131.0.6778.205)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F20A80D5+2992373]
+	(No symbol) [0x00007FF7F1D3BFD0]
+	(No symbol) [0x00007FF7F1BD590A]
+	(No symbol) [0x00007FF7F1C214A8]
+	(No symbol) [0x00007FF7F1C4F36A]
+	(No symbol) [0x00007FF7F1C1C596]
+	(No symbol) [0x00007FF7F1C4F580]
+	(No symbol) [0x00007FF7F1C6F584]
+	(No symbol) [0x00007FF7F1C4F113]
+	(No symbol) [0x00007FF7F1C1A918]
+	(No symbol) [0x00007FF7F1C1BA81]
+	GetHandleVerifier [0x00007FF7F2106A2D+3379789]
+	GetHandleVerifier [0x00007FF7F211C32D+3468109]
+	GetHandleVerifier [0x00007FF7F2110043+3418211]
+	GetHandleVerifier [0x00007FF7F1E9C78B+847787]
+	(No symbol) [0x00007FF7F1D4757F]
+	(No symbol) [0x00007FF7F1D42FC4]
+	(No symbol) [0x00007FF7F1D4315D]
+	(No symbol) [0x00007FF7F1D32979]
+	BaseThreadInitThunk [0x00007FFF968CE8D7+23]
+	RtlUserThreadStart [0x00007FFF9741BF6C+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-03-09T09:37:58.962443" elapsed="0.368432">InvalidArgumentException: Message: invalid argument: File not found : C:UsersdouglDesktopRobot_Webesourcesimgsprincess.jpg
+  (Session info: chrome=131.0.6778.205)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F20A80D5+2992373]
+	(No symbol) [0x00007FF7F1D3BFD0]
+	(No symbol) [0x00007FF7F1BD590A]
+	(No symbol) [0x00007FF7F1C214A8]
+	(No symbol) [0x00007FF7F1C4F36A]
+	(No symbol) [0x00007FF7F1C1C596]
+	(No symbol) [0x00007FF7F1C4F580]
+	(No symbol) [0x00007FF7F1C6F584]
+	(No symbol) [0x00007FF7F1C4F113]
+	(No symbol) [0x00007FF7F1C1A918]
+	(No symbol) [0x00007FF7F1C1BA81]
+	GetHandleVerifier [0x00007FF7F2106A2D+3379789]
+	GetHandleVerifier [0x00007FF7F211C32D+3468109]
+	GetHandleVerifier [0x00007FF7F2110043+3418211]
+	GetHandleVerifier [0x00007FF7F1E9C78B+847787]
+	(No symbol) [0x00007FF7F1D4757F]
+	(No symbol) [0x00007FF7F1D42FC4]
+	(No symbol) [0x00007FF7F1D4315D]
+	(No symbol) [0x00007FF7F1D32979]
+	BaseThreadInitThunk [0x00007FFF968CE8D7+23]
+	RtlUserThreadStart [0x00007FFF9741BF6C+44]
+</status>
+</kw>
+<kw name="Check if is Download" owner="upload_download_page">
+<status status="NOT RUN" start="2025-03-09T09:37:59.331896" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-03-09T09:37:58.961442" elapsed="0.371451">InvalidArgumentException: Message: invalid argument: File not found : C:UsersdouglDesktopRobot_Webesourcesimgsprincess.jpg
+  (Session info: chrome=131.0.6778.205)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7F20A80D5+2992373]
+	(No symbol) [0x00007FF7F1D3BFD0]
+	(No symbol) [0x00007FF7F1BD590A]
+	(No symbol) [0x00007FF7F1C214A8]
+	(No symbol) [0x00007FF7F1C4F36A]
+	(No symbol) [0x00007FF7F1C1C596]
+	(No symbol) [0x00007FF7F1C4F580]
+	(No symbol) [0x00007FF7F1C6F584]
+	(No symbol) [0x00007FF7F1C4F113]
+	(No symbol) [0x00007FF7F1C1A918]
+	(No symbol) [0x00007FF7F1C1BA81]
+	GetHandleVerifier [0x00007FF7F2106A2D+3379789]
+	GetHandleVerifier [0x00007FF7F211C32D+3468109]
+	GetHandleVerifier [0x00007FF7F2110043+3418211]
+	GetHandleVerifier [0x00007FF7F1E9C78B+847787]
+	(No symbol) [0x00007FF7F1D4757F]
+	(No symbol) [0x00007FF7F1D42FC4]
+	(No symbol) [0x00007FF7F1D4315D]
+	(No symbol) [0x00007FF7F1D32979]
+	BaseThreadInitThunk [0x00007FFF968CE8D7+23]
+	RtlUserThreadStart [0x00007FFF9741BF6C+44]
+</status>
+</test>
+<status status="FAIL" start="2025-03-09T09:37:26.812680" elapsed="32.522199"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Home">Home</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="Home">Home</stat>
 </suite>
 </statistics>
 <errors>

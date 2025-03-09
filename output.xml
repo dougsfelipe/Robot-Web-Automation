@@ -1,35 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-05T18:02:23.748661" rpa="false" schemaversion="5">
-<suite id="s1" name="Form" source="c:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\Form.robot">
-<test id="s1-t1" name="Teste de Navegação para Elements" line="5">
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-09T09:38:40.992257" rpa="false" schemaversion="5">
+<suite id="s1" name="Home" source="c:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\home.robot">
+<test id="s1-t1" name="Download an File" line="21">
 <kw name="Acessar Página Inicial" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-05T18:02:23.983195" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg time="2025-03-09T09:38:41.284243" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-05T18:02:23.982204" elapsed="12.654389"/>
+<status status="PASS" start="2025-03-09T09:38:41.284243" elapsed="5.014524"/>
 </kw>
-<status status="PASS" start="2025-03-05T18:02:23.981209" elapsed="12.655384"/>
+<status status="PASS" start="2025-03-09T09:38:41.280684" elapsed="5.019481"/>
 </kw>
-<kw name="Clicar em Elements" owner="home_page">
+<kw name="Clicar no elemento" owner="home_page">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-09T09:38:46.302859" level="INFO">${seletor} = xpath=//h5[text()='Forms']</msg>
+<var>${seletor}</var>
+<arg>xpath=//h5[text()='${texto}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.301853" elapsed="0.001006"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seletor}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.302859" elapsed="0.030051"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-05T18:02:36.638606" level="INFO">Clicking element 'xpath=//*[@id="app"]/div/div/div[2]/div/div[1]/div/div[3]'.</msg>
-<arg>xpath=//*[@id="app"]/div/div/div[2]/div/div[1]/div/div[3]</arg>
+<msg time="2025-03-09T09:38:46.333895" level="INFO">Clicking element 'xpath=//h5[text()='Forms']'.</msg>
+<arg>${seletor}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-05T18:02:36.638606" elapsed="0.139608"/>
+<status status="PASS" start="2025-03-09T09:38:46.332910" elapsed="0.133517"/>
 </kw>
-<status status="PASS" start="2025-03-05T18:02:36.637595" elapsed="0.140619"/>
+<arg>Forms</arg>
+<status status="PASS" start="2025-03-09T09:38:46.300677" elapsed="0.165750"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-05T18:02:36.796928" level="INFO">Current page contains text 'Elements'.</msg>
-<arg>Elements</arg>
+<msg time="2025-03-09T09:38:46.488416" level="INFO">Current page contains text 'Forms'.</msg>
+<arg>Forms</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-05T18:02:36.779251" elapsed="0.018931"/>
+<status status="PASS" start="2025-03-09T09:38:46.468707" elapsed="0.019709"/>
 </kw>
-<status status="PASS" start="2025-03-05T18:02:23.980201" elapsed="12.819338"/>
+<kw name="Click on Upload and Download" owner="upload_download_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:38:46.490417" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]'.</msg>
+<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Elements')])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.490417" elapsed="0.085446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.575863" elapsed="0.270913"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:38:46.847775" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Upload and Download')]'.</msg>
+<arg>xpath=//*[contains(text(), 'Upload and Download')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.847775" elapsed="0.107283"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:46.489415" elapsed="0.465643"/>
+</kw>
+<kw name="Click Download" owner="upload_download_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:38:46.957286" level="INFO">Clicking element 'id=downloadButton'.</msg>
+<arg>id=downloadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:38:46.957286" elapsed="0.198514"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:46.956067" elapsed="0.199733"/>
+</kw>
+<kw name="Check if is Download" owner="upload_download_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-03-09T09:38:47.159799" level="INFO" html="true">File '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' exists.</msg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.158806" elapsed="0.000993"/>
+</kw>
+<arg>30x</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.157797" elapsed="0.002002"/>
+</kw>
+<kw name="Get File Size" owner="OperatingSystem">
+<msg time="2025-03-09T09:38:47.160801" level="INFO" html="true">Size of file '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' is 4096 bytes.</msg>
+<msg time="2025-03-09T09:38:47.161808" level="INFO">${size} = 4096</msg>
+<var>${size}</var>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Returns and logs file size as an integer in bytes.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.160801" elapsed="0.001007"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${size} &gt; 0</arg>
+<arg>File its correct</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.161808" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:47.156805" elapsed="0.005993"/>
+</kw>
+<kw name="Click Upload" owner="upload_download_page">
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-03-09T09:38:47.164216" level="INFO">Sending C:\Users\dougl\Desktop\Robot_Web\resources\imgs\princess.jpg to browser.</msg>
+<arg>id=uploadFile</arg>
+<arg>${UPLOAD_NAME}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.164216" elapsed="0.065509"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:47.162798" elapsed="0.068001"/>
+</kw>
+<kw name="Check if is Download" owner="upload_download_page">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-03-09T09:38:47.233810" level="INFO" html="true">File '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' exists.</msg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.233810" elapsed="0.000992"/>
+</kw>
+<arg>30x</arg>
+<arg>2s</arg>
+<arg>File Should Exist</arg>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.232814" elapsed="0.001988"/>
+</kw>
+<kw name="Get File Size" owner="OperatingSystem">
+<msg time="2025-03-09T09:38:47.235804" level="INFO" html="true">Size of file '&lt;a href="file://C:\Users\dougl\Downloads\sampleFile.jpeg"&gt;C:\Users\dougl\Downloads\sampleFile.jpeg&lt;/a&gt;' is 4096 bytes.</msg>
+<msg time="2025-03-09T09:38:47.236804" level="INFO">${size} = 4096</msg>
+<var>${size}</var>
+<arg>${DOWNLOAD_PATH}/${FILE_NAME}</arg>
+<doc>Returns and logs file size as an integer in bytes.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.234802" elapsed="0.002002"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${size} &gt; 0</arg>
+<arg>File its correct</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-03-09T09:38:47.237817" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:47.231804" elapsed="0.007114"/>
+</kw>
+<status status="PASS" start="2025-03-09T09:38:41.279670" elapsed="5.961339"/>
 </test>
-<status status="PASS" start="2025-03-05T18:02:23.753257" elapsed="13.047664"/>
+<status status="PASS" start="2025-03-09T09:38:40.998573" elapsed="6.245118"/>
 </suite>
 <statistics>
 <total>
@@ -38,7 +154,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Form">Form</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
 </suite>
 </statistics>
 <errors>
