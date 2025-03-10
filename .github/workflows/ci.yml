@@ -1,63 +1,48 @@
-name: Robot Framework GUI Automated Tests Pipeline
+name: Robot Framework Tests
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  robot-run:
-    runs-on: ubuntu-24.04
+  test:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          pip install robotframework
-          pip install robotframework-seleniumlibrary
-          pip install robotframework-requests  # Se for usar API
-          pip install robotframework-yamllibrary      # Se for usar arquivos YAML
-          
-      - name: Install Latest Google Chrome and ChromeDriver
+          python -m pip install --upgrade pip
+          pip install robotframework robotframework-seleniumlibrary
+          pip install -r requirements.txt
+
+      - name: Setup Chrome and Chromedriver
         run: |
-          sudo apt update
-          sudo apt install -y wget curl unzip
-          
-          # Instalação do Google Chrome mais recente
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt update
-          sudo apt install -y google-chrome-stable
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
+          DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$DRIVER_VERSION/chromedriver_linux64.zip"
+          unzip /tmp/chromedriver.zip -d /usr/local/bin/
+          chmod +x /usr/local/bin/chromedriver
 
-          # Baixa a versão correta do ChromeDriver
-          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f1)
-          DRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}")
-          wget -q "https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip"
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
-
-      - name: Set Chrome Path
-        run: echo "CHROME_BIN=$(which google-chrome)" >> $GITHUB_ENV
-
-
-      - name: Run Robot Tests (Headless Mode)
+      - name: Run Robot Framework Tests
         run: |
-          robot --outputdir results -v BROWSER:chrome -v OPTIONS:"--headless --no-sandbox --disable-dev-shm-usage" tests/functional_tests/home.robot
+          robot -d results tests/functional_tests/home.robot
 
-      - name: Upload Robot Reports
+      - name: Upload Test Results
         uses: actions/upload-artifact@v4
         with:
-          name: robot-reports
+          name: robot-test-results
           path: results
-          if-no-files-found: ignore
-
-      - name: Upload Robot Logs
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-logs
-          path: results/log.html
-          if-no-files-found: ignore
