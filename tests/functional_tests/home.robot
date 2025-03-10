@@ -3,8 +3,11 @@ Resource    ../../resources/page_objects/home_page.robot
 Resource    ../../resources/page_objects/form_page.robot
 Resource    ../../resources/page_objects/upload_download_page.robot
 Resource    ../../resources/page_objects/alert_page.robot
+Resource    ../../resources/page_objects/data_picker_page.robot
 
 *** Test Cases ***
+
+
 Add, Edit and Delete an User in Web Tables
     Acessar Página Inicial
     Clicar no elemento     Forms
@@ -41,4 +44,12 @@ Check Alerts
     Click in cancell allert
     Click in Prompt allert    Douglas
     Close Browser
+
+Check Date and Time
+    Acessar Página Inicial
+    Clicar no elemento     Widgets
+    Page Should Contain    Widgets
+    Click on Date Picker
+    Pick Date
+    Pick Date and time
     

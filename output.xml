@@ -1,182 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-09T12:53:09.224242" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2025-03-10T19:05:16.172613" rpa="false" schemaversion="5">
 <suite id="s1" name="Home" source="c:\Users\dougl\Desktop\Robot_Web\tests\functional_tests\home.robot">
-<test id="s1-t1" name="Check Alerts" line="32">
+<test id="s1-t1" name="Check Date and Time" line="48">
 <kw name="Acessar Página Inicial" owner="home_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:09.533275" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg time="2025-03-10T19:05:16.449518" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-09T12:53:09.532130" elapsed="6.284031"/>
+<status status="PASS" start="2025-03-10T19:05:16.449518" elapsed="5.092759"/>
 </kw>
-<status status="PASS" start="2025-03-09T12:53:09.531115" elapsed="6.285046"/>
+<status status="PASS" start="2025-03-10T19:05:16.448524" elapsed="5.093753"/>
 </kw>
 <kw name="Clicar no elemento" owner="home_page">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-03-09T12:53:15.818164" level="INFO">${seletor} = xpath=//h5[text()='Alerts, Frame &amp; Windows']</msg>
+<msg time="2025-03-10T19:05:21.544293" level="INFO">${seletor} = xpath=//h5[text()='Widgets']</msg>
 <var>${seletor}</var>
 <arg>xpath=//h5[text()='${texto}']</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-03-09T12:53:15.818164" elapsed="0.000000"/>
+<status status="PASS" start="2025-03-10T19:05:21.543297" elapsed="0.000996"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${seletor}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-09T12:53:15.819398" elapsed="0.053903"/>
+<status status="PASS" start="2025-03-10T19:05:21.544293" elapsed="0.029888"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:15.874295" level="INFO">Clicking element 'xpath=//h5[text()='Alerts, Frame &amp; Windows']'.</msg>
+<msg time="2025-03-10T19:05:21.575212" level="INFO">Clicking element 'xpath=//h5[text()='Widgets']'.</msg>
 <arg>${seletor}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:15.874295" elapsed="0.132433"/>
+<status status="PASS" start="2025-03-10T19:05:21.575212" elapsed="0.131151"/>
 </kw>
-<arg>Alerts, Frame &amp; Windows</arg>
-<status status="PASS" start="2025-03-09T12:53:15.817160" elapsed="0.189568"/>
+<arg>Widgets</arg>
+<status status="PASS" start="2025-03-10T19:05:21.543297" elapsed="0.163066"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.026824" level="INFO">Current page contains text 'Alerts, Frame &amp; Windows'.</msg>
-<arg>Alerts, Frame &amp; Windows</arg>
+<msg time="2025-03-10T19:05:21.731306" level="INFO">Current page contains text 'Widgets'.</msg>
+<arg>Widgets</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.007741" elapsed="0.020082"/>
+<status status="PASS" start="2025-03-10T19:05:21.708384" elapsed="0.024922"/>
 </kw>
-<kw name="Click on Alerts, Frame &amp; Windows" owner="alert_page">
+<kw name="Click on Date Picker" owner="data_picker_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.030117" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Alerts, Frame &amp; Windows')])[2]'.</msg>
-<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Alerts, Frame &amp; Windows')])[2]</arg>
+<msg time="2025-03-10T19:05:21.736315" level="INFO">Clicking element 'xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Date Picker')])[2]'.</msg>
+<arg>xpath=(//*[@id="app"]/div/div/div//div/div/div[contains(., 'Date Picker')])[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.029119" elapsed="0.108395"/>
+<status status="PASS" start="2025-03-10T19:05:21.736315" elapsed="0.093762"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[contains(text(), 'Browser Windows')]</arg>
+<arg>xpath=//*[contains(text(), 'Date Picker')]</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.137514" elapsed="0.030491"/>
+<status status="PASS" start="2025-03-10T19:05:21.830077" elapsed="0.027502"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.168005" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Alerts')]'.</msg>
-<arg>xpath=//*[contains(text(), 'Alerts')]</arg>
+<msg time="2025-03-10T19:05:21.858583" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Date Picker')]'.</msg>
+<arg>xpath=//*[contains(text(), 'Date Picker')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.168005" elapsed="0.088253"/>
+<status status="PASS" start="2025-03-10T19:05:21.858583" elapsed="0.088911"/>
 </kw>
-<status status="PASS" start="2025-03-09T12:53:16.029119" elapsed="0.227139"/>
+<status status="PASS" start="2025-03-10T19:05:21.735308" elapsed="0.212186"/>
 </kw>
-<kw name="Click in Basic allert" owner="alert_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.259260" level="INFO">Clicking button 'id=alertButton'.</msg>
-<arg>id=alertButton</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.258258" elapsed="0.112191"/>
+<kw name="Pick Date" owner="data_picker_page">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-03-10T19:05:21.950338" level="INFO">${Yesterday_DateTime} = 09/03/2025</msg>
+<var>${Yesterday_DateTime}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<arg>increment=-1 day</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-03-10T19:05:21.948899" elapsed="0.001439"/>
 </kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.371429" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
-<arg>You clicked a button</arg>
-<arg>timeout=2s</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.371429" elapsed="0.008427"/>
-</kw>
-<status status="PASS" start="2025-03-09T12:53:16.257255" elapsed="0.123982"/>
-</kw>
-<kw name="Click in Timer allert" owner="alert_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:16.382602" level="INFO">Clicking button 'id=timerAlertButton'.</msg>
-<arg>id=timerAlertButton</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.382602" elapsed="0.143097"/>
-</kw>
-<kw name="Alert Should Not Be Present" owner="SeleniumLibrary">
-<arg>You clicked a button</arg>
-<arg>timeout=4s</arg>
-<doc>Verifies that no alert is present.</doc>
-<status status="PASS" start="2025-03-09T12:53:16.526723" elapsed="4.305809"/>
-</kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:20.833571" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:07</msg>
-<arg>This alert appeared after 5 seconds</arg>
-<arg>timeout=7s</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2025-03-09T12:53:20.832532" elapsed="1.015529"/>
-</kw>
-<status status="PASS" start="2025-03-09T12:53:16.381237" elapsed="5.466824"/>
-</kw>
-<kw name="Click in confirm allert" owner="alert_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:21.850502" level="INFO">Clicking button 'id=confirmButton'.</msg>
-<arg>id=confirmButton</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:21.850502" elapsed="0.123026"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:21.975031" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
-<arg>action=ACCEPT</arg>
-<arg>timeout=5s</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-03-09T12:53:21.973528" elapsed="0.008393"/>
-</kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<arg>xpath=//span[@id='confirmResult']</arg>
-<arg>You selected Ok</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T12:53:21.983362" elapsed="0.040687"/>
-</kw>
-<status status="PASS" start="2025-03-09T12:53:21.849497" elapsed="0.174552"/>
-</kw>
-<kw name="Click in cancell allert" owner="alert_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:22.026042" level="INFO">Clicking button 'id=confirmButton'.</msg>
-<arg>id=confirmButton</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:22.026042" elapsed="0.123929"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:22.149971" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
-<arg>action=DISMISS</arg>
-<arg>timeout=5s</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-03-09T12:53:22.149971" elapsed="0.006497"/>
-</kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<arg>xpath=//span[@id='confirmResult']</arg>
-<arg>You selected Cancel</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T12:53:22.157472" elapsed="0.019286"/>
-</kw>
-<status status="PASS" start="2025-03-09T12:53:22.025045" elapsed="0.151713"/>
-</kw>
-<kw name="Click in Prompt allert" owner="alert_page">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-09T12:53:22.179278" level="INFO">Clicking button 'id=promtButton'.</msg>
-<arg>id=promtButton</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-09T12:53:22.178268" elapsed="0.123067"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:21.951340" level="INFO">Clicking element 'id=datePickerMonthYearInput'.</msg>
+<arg>id=datePickerMonthYearInput</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:21.950338" elapsed="0.177849"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-09T12:53:23.302830" level="INFO">Slept 1 second.</msg>
+<msg time="2025-03-10T19:05:23.129771" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-09T12:53:22.302346" elapsed="1.000484"/>
+<status status="PASS" start="2025-03-10T19:05:22.129183" elapsed="1.000588"/>
 </kw>
-<kw name="Input Text Into Alert" owner="SeleniumLibrary">
-<arg>${NAME_ALERT}</arg>
-<doc>Types the given ``text`` into an input field in an alert.</doc>
-<status status="PASS" start="2025-03-09T12:53:23.302830" elapsed="0.009019"/>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:23.130808" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to id=datePickerMonthYearInput element.</msg>
+<msg time="2025-03-10T19:05:23.456409" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-03-10T19:05:23.457463" level="INFO">Sending key a</msg>
+<msg time="2025-03-10T19:05:23.457463" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-03-10T19:05:23.471862" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-03-10T19:05:23.472867" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>id=datePickerMonthYearInput</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-10T19:05:23.130808" elapsed="0.356747"/>
 </kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<arg>xpath=//span[@id='promptResult']</arg>
-<arg>${NAME_ALERT}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-03-09T12:53:23.312847" elapsed="0.054806"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-10T19:05:24.488956" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-10T19:05:23.487555" elapsed="1.001916"/>
 </kw>
-<arg>Douglas</arg>
-<status status="PASS" start="2025-03-09T12:53:22.178268" elapsed="1.189385"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:24.490491" level="INFO">Typing text '09/03/2025' into text field 'id=datePickerMonthYearInput'.</msg>
+<arg>id=datePickerMonthYearInput</arg>
+<arg>${Yesterday_DateTime}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.489471" elapsed="0.180323"/>
 </kw>
-<status status="PASS" start="2025-03-09T12:53:09.531115" elapsed="13.837930"/>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:24.690405" level="INFO">${Inserted_DateTime} = 09/03/2025</msg>
+<var>${Inserted_DateTime}</var>
+<arg>id=datePickerMonthYearInput</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.669794" elapsed="0.020611"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Inserted_DateTime}</arg>
+<arg>${Yesterday_DateTime}</arg>
+<arg>msg=Erro: A data no Date Picker está incorreta!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.690405" elapsed="0.001089"/>
+</kw>
+<status status="PASS" start="2025-03-10T19:05:21.948899" elapsed="2.742595"/>
+</kw>
+<kw name="Pick Date and time" owner="data_picker_page">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:24.693536" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg time="2025-03-10T19:05:24.693536" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg time="2025-03-10T19:05:24.694540" level="INFO">Releasing special key ESCAPE.</msg>
+<arg>NONE</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.693536" elapsed="0.017071"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-03-10T19:05:24.711617" level="INFO">${Yesterday_DateTime} = 09/03/2025 19:05</msg>
+<var>${Yesterday_DateTime}</var>
+<arg>result_format=%d/%m/%Y %H:%M</arg>
+<arg>increment=-1 day</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.710607" elapsed="0.001010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:24.711617" level="INFO">Clicking element 'id=dateAndTimePickerInput'.</msg>
+<arg>id=dateAndTimePickerInput</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.711617" elapsed="0.152211"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-10T19:05:25.865058" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-10T19:05:24.864963" elapsed="1.000095"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:25.867080" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to id=dateAndTimePickerInput element.</msg>
+<msg time="2025-03-10T19:05:26.157235" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-03-10T19:05:26.158241" level="INFO">Sending key a</msg>
+<msg time="2025-03-10T19:05:26.158241" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-03-10T19:05:26.188057" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-03-10T19:05:26.188057" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>id=dateAndTimePickerInput</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-03-10T19:05:25.866082" elapsed="0.357251"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-10T19:05:27.224871" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-10T19:05:26.224358" elapsed="1.001579"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:27.226932" level="INFO">Typing text '09/03/2025 19:05' into text field 'id=dateAndTimePickerInput'.</msg>
+<arg>id=dateAndTimePickerInput</arg>
+<arg>${Yesterday_DateTime}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:27.225937" elapsed="0.203802"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2025-03-10T19:05:27.450307" level="INFO">${Inserted_Date} = 09/03/2025 19:05</msg>
+<var>${Inserted_Date}</var>
+<arg>id=dateAndTimePickerInput</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-10T19:05:27.430738" elapsed="0.019569"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${Inserted_Date}</arg>
+<arg>${Yesterday_DateTime}</arg>
+<arg>msg=Erro: A data no Date Picker está incorreta!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-10T19:05:27.450307" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2025-03-10T19:05:24.692535" elapsed="2.758779"/>
+</kw>
+<status status="PASS" start="2025-03-10T19:05:16.447522" elapsed="11.004796"/>
 </test>
-<status status="PASS" start="2025-03-09T12:53:09.229249" elapsed="14.142114"/>
+<status status="PASS" start="2025-03-10T19:05:16.177600" elapsed="11.276707"/>
 </suite>
 <statistics>
 <total>
