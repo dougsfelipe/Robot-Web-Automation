@@ -1,0 +1,30 @@
+# Dependências do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs e relatórios do Robot Framework
+log.html
+output.xml
+report.html
+debug.log
+results/
+logs/
+screenshots/
+*.png
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Configurações de IDEs
+.idea/
+.vscode/
