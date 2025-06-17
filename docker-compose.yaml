@@ -1,0 +1,7 @@
+services:
+  robot-tests:
+    build: .
+    volumes:
+      - .:/app
+    shm_size: '1gb'
+    command: robot --outputdir output tests/

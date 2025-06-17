@@ -6,7 +6,7 @@ ${URL}    https://demoqa.com/
 
 *** Keywords ***
 Acessar Página Inicial
-    Open Browser    ${URL}    chrome 
+    Open Browser    ${URL}    chrome     
 
 Clicar no elemento
     [Arguments]    ${texto}

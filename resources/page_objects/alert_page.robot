@@ -14,7 +14,7 @@ Click on Alerts, Frame & Windows
 
 Click in Basic allert
     Click Button    id=alertButton
-    Alert Should Be Present    You clicked a button    timeout=2s
+    Alert Should Be Present    You clicked a button    timeout=5s
 
 Click in Timer allert
     Click Button    id=timerAlertButton
@@ -33,7 +33,10 @@ Click in cancell allert
     
 Click in Prompt allert
     [Arguments]    ${NAME_ALERT}
-    Click Button    id=promtButton
+    Scroll Element Into View    id=promtButton
+    Wait Until Element Is Enabled    id=promtButton    timeout=10s
+    #uSE JS because of the add
+    Execute JavaScript    document.getElementById('promtButton').click(); 
     Sleep    1s
     Input Text Into Alert    ${NAME_ALERT}
     Wait Until Element Contains    xpath=//span[@id='promptResult']   ${NAME_ALERT}    timeout=5s
